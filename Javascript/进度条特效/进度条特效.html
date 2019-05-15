@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>进度条特效</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    #progress {
+      width: 900px;
+      height: 30px;
+      line-height: 30px;
+      background-color: #e8e8e8;
+      margin: 100px auto;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    #progress_bar {
+      width: 800px;
+      height: 100%;
+      background-color: #ccc;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    #progress_value {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    #progress_bar_fg {
+      width: 30px;
+      height: 100%;
+      background-color: orangered;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+
+    #mask {
+      width: 25px;
+      height: 40px;
+      background-color: orangered;
+      position: absolute;
+      left: 40px;
+      top: -5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="progress">
+    <div id="progress_bar">
+      <div id="progress_bar_fg"></div>
+      <span id="mask"></span>
+    </div>
+    <div id="progress_value">0%</div>
+  </div>
+
+  <script>
+    window.onload = function () {
+      
+    }
+  </script>
+</body>
+
+</html>
