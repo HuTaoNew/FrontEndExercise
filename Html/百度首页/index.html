@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>百度一下，你就知道!</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #header {
+      height: 33px;
+      /* background-color: purple; */
+    }
+
+    #header .header-left {
+      height: 33px;
+      width: 50%;
+      /* line-height: 33px; */
+      /* vertical-align: middle; */
+      float: left;
+      /* background-color: yellowgreen; */
+    }
+
+    .header-left span {
+      height: 33px;
+      line-height: 33px;
+      vertical-align: middle;
+    }
+
+    .header-left span img {
+      margin-top: -3px;
+      vertical-align: middle;
+    }
+
+    .header-left span a {
+      color: #555555;
+      font-size: 13px;
+      margin-left: 8px;
+    }
+
+    #header .header-right {
+      height: 33px;
+      width: 50%;
+      line-height: 33px;
+      float: right;
+      /* background-color: cadetblue; */
+      text-align: right;
+    }
+
+    #header .header-right a {
+      color: #555555;
+      font-size: 13px;
+      font-weight: bolder;
+      margin-left: 15px;
+    }
+
+    .more-prodcut {
+      display: inline-block;
+      color: white;
+      background-color: #398bfb;
+      width: 86px;
+      height: 33px;
+      text-decoration: none;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    #content {
+      width: 641px;
+      height: 189px;
+      margin: 20px auto;
+      /* background-color: purple; */
+    }
+
+    .logo {
+      text-align: center;
+      width: 641px;
+      height: 112px;
+      /* background-color:yellow; */
+    }
+
+    .logo img {
+      width: 270px;
+      height: 112px;
+    }
+
+    .search {
+      width: 100%;
+      height: 77px;
+      padding-top: 10px;
+      /* background-color: green; */
+    }
+
+    .search-input {
+      height: 44px;
+      width: 536px;
+      outline: none;
+      border: 1px solid #e0e0e0;
+      float: left;
+    }
+
+    .search-button {
+      height: 44px;
+      width: 105px;
+      outline: none;
+      background-color: #398bfb;
+      border: none;
+      font-size: 16px;
+      color: white;
+    }
+
+    #list {
+      width: 893px;
+      height: 600px;
+      border: 1px solid #ebebeb;
+      margin: 0 auto;
+      /* background-color: purple; */
+    }
+
+    .list-header {
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    .list-header-left {
+      float: left;
+    }
+
+    .list-header-left a{
+      text-decoration: none;
+      font-size: 14px;
+      color: #555555;
+      display: inline-block;
+      padding: 0 10px;
+      vertical-align: top;
+      /* line-height: 40px; */
+      /* vertical-align: middle; */
+    }
+
+    .list-header-left a:hover {
+      background-color: #fff;
+    }
+
+    .list-header-left a img{
+      vertical-align: middle;
+    }
+
+    .list-header-right {
+      line-height: 40px;
+      float: right;
+    }
+
+    .list-header-right a {
+      padding: 0 10px;
+    }
+
+    .list-header-right a img {
+      vertical-align: middle;
+    }
+
+    .list-body-left {
+      width: 575px;
+      height: 600px;
+      float:left;
+      padding: 10px 5px 5px 10px;
+      /*background-color: brown*/
+    }
+
+    .list-body-right {
+      width: 315px;
+      height: 600px;
+      float: left;
+      /*background-color: yellow*/
+    }
+
+    .list-centent-cell1 {
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+
+    .list-centent-cell1 p{
+      margin: 3px 0;
+      color: #555555;
+      font-size: 12px;
+    }
+
+    .list-centent-cell1 h3 {
+      margin-bottom: 10px;
+    }
+
+    .list-content-cell2 {
+      padding: 20px 0;
+      height: 160px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .cell2-left{
+      float: left;
+    }
+
+    .cell2-right {
+      float: left;
+      width: 360px;
+      padding: 20px;
+    }
+
+    .cell2-right p {
+      margin: 5px 0;
+      color: #555555;
+      font-size: 12px;
+    }
+
+    .right-top {
+      width: 315px;
+      height: 40px;
+      /* background-color: #cacaca;*/
+      line-height: 40px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .right-top h4 {
+      float: left;
+    }
+
+    .right-top .top-change {
+      float: right;
+    }
+
+    .right-top .top-change img {
+      vertical-align: middle;
+    }
+
+    .right-body {
+      padding-left: 10px;
+    }
+
+    .right-body ul li{
+      list-style: none;
+      width: 130px;
+      height: 40px;
+      line-height: 40px;
+      color: #666666;
+      font-size: 14px;
+      float: left;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <div class="header-left">
+      <span>
+        <img src="images/weather.png" alt="">
+      </span>
+      <span>
+        <span>|</span>
+        <a href="#">换肤</a>
+        <a href="#">消息</a>
+      </span>
+    </div>
+    <div class="header-right">
+      <a href="#">新闻</a>
+      <a href="#">hao123</a>
+      <a href="#">地图</a>
+      <a href="#">学术</a>
+      <a href="#">撩课学院</a>
+      <a class="more-prodcut" href="#" style="color:white;">更多产品</a>
+    </div>
+  </header>
+
+  <section id="content">
+    <div class="logo">
+      <img src="images/bd_logo.png" alt="">
+    </div>
+
+    <div class="search">
+      <form action="#">
+        <input class="search-input" type="text">
+        <input class="search-button" type="submit" value="百度一下">
+      </form>
+    </div>
+  </section>
+
+  <section id="list">
+    <div class="list-header">
+      <div class="list-header-left">
+        <a href="#"><img src="images/person_icon.png" alt=""><span>我的关注</span></a>
+        <a href="#"><span>推荐</span></a>
+        <a href="#"><span>导航</span></a>
+      </div>
+      <div class="list-header-right">
+        <a href="#"><img src="images/setting_icon.png" alt=""></a>
+      </div>
+    </div>
+    <div class="list-body">
+      <div class="list-body-left">
+        <div class="list-centent-cell1">
+          <h3>大满贯14冠！德约3-0完胜波特罗 美网三度封王</h3>
+          <img src="images/cell_img1.png" alt="">
+          <img src="images/cell_img2.png" alt="">
+          <img src="images/cell_img3.png" alt="">
+          <p>网易新闻 09-20 13:19</p>
+        </div>
+
+        <div class="list-content-cell2">
+          <div class="cell2-left">
+              <img src="images/cell_img1.png" alt="">
+          </div>
+          <div class="cell2-right">
+            <h3>大满贯14冠！德约3-0完胜波特罗 美网三度封王</h3>
+            <p>网易新闻 09-20 13:19</p>
+          </div>
+        </div>
+
+        <div class="list-content-cell2">
+            <div class="cell2-left">
+                <img src="images/cell_img1.png" alt="">
+            </div>
+            <div class="cell2-right">
+              <h3>大满贯14冠！德约3-0完胜波特罗 美网三度封王</h3>
+              <p>网易新闻 09-20 13:19</p>
+            </div>
+          </div>
+      </div>
+      <div class="list-body-right">
+        <div class="right-top">
+          <h4>实时热点</h4>
+          <div class="top-change">
+            <img src="images/circle_icon.png" alt="">
+            <span>换一换</span>
+          </div>
+        </div>
+        <div class="right-body">
+          <ul>
+            <li>郭艾伦助攻榜前十</li>
+            <li>李亚鹏是香港居民</li>
+            <li>MSCI提高A股权重</li>
+            <li>作业盒子回应质疑</li>
+            <li>俄货轮醉驾撞大桥</li>
+            <li>特鲁多拒绝辞职</li>
+            <li>朝美承诺再次会晤</li>
+            <li>朝鲜回应解除制裁</li>
+            <li>97版天龙八部重聚</li>
+            <li>97版天龙八部重聚</li>
+          </ul>
+        </div>
+      
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+
+</body>
+
+</html>
